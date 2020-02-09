@@ -27,7 +27,9 @@ namespace ParameterStoreDemo.Lambda
         
         public string FunctionHandler(string input, ILambdaContext context)
         {
-            return input?.ToUpper();
+            var service = _serviceProvider.GetService<IConfigReader>();
+
+            return service.Read();
         }
     }
 }

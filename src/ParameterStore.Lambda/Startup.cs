@@ -13,7 +13,7 @@ namespace ParameterStoreDemo.Lambda
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddEnvironmentVariables()
-            .AddSystemsManager("/parameterstoredemo/firstname")
+            .AddSystemsManager("/parameterstoredemo/configuration")
             .Build();
         
         private static IServiceCollection ConfigureServices(IConfigurationRoot root)
@@ -21,7 +21,7 @@ namespace ParameterStoreDemo.Lambda
             var services = new ServiceCollection();
             services.Configure<CustomConfig>(root.Bind);
                     
-            //services.AddScoped<ICustomClass,CustomClass>();
+            services.AddScoped<IConfigReader,ConfigReader>();
 
             services.AddLogging(x =>
             {
