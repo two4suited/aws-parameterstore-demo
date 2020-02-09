@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9b96653-37b7-4af0-abac-c722a96b7121" name="Default Changelist" comment="Added parameter store setting">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParameterStoreDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParameterStoreDemo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +135,7 @@
       <workItem from="1581263371095" duration="915000" />
       <workItem from="1581264402589" duration="394000" />
       <workItem from="1581264806803" duration="44000" />
-      <workItem from="1581265442182" duration="8135000" />
+      <workItem from="1581265442182" duration="8803000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1581261177027</created>
@@ -193,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581289154868</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Checking in Rider Idea folder">
+      <created>1581289375653</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581289375653</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update to exclude .DS_Store files">
+      <created>1581289415957</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581289415957</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +237,9 @@
     <MESSAGE value="Got Application working locally" />
     <MESSAGE value="Update Gitignore" />
     <MESSAGE value="Added in Birthdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added in Birthdate" />
+    <MESSAGE value="Checking in Rider Idea folder" />
+    <MESSAGE value="Update to exclude .DS_Store files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to exclude .DS_Store files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="86" key="#[Local]_Function_Handler" timestamp="1581262847420">
@@ -243,26 +259,26 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="724" y="260" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1581262286875" />
-    <state width="1750" height="279" key="GridCell.Tab.0.bottom" timestamp="1581289045808">
+    <state width="1750" height="279" key="GridCell.Tab.0.bottom" timestamp="1581289354455">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="1750" height="280" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1581266792570" />
-    <state width="1750" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1030@0.23.1792.1030" timestamp="1581289045808" />
-    <state width="1750" height="279" key="GridCell.Tab.0.center" timestamp="1581289045807">
+    <state width="1750" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1030@0.23.1792.1030" timestamp="1581289354455" />
+    <state width="1750" height="279" key="GridCell.Tab.0.center" timestamp="1581289354455">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="1750" height="280" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1581266792570" />
-    <state width="1750" height="279" key="GridCell.Tab.0.center/0.23.1792.1030@0.23.1792.1030" timestamp="1581289045807" />
-    <state width="1750" height="279" key="GridCell.Tab.0.left" timestamp="1581289045807">
+    <state width="1750" height="279" key="GridCell.Tab.0.center/0.23.1792.1030@0.23.1792.1030" timestamp="1581289354455" />
+    <state width="1750" height="279" key="GridCell.Tab.0.left" timestamp="1581289354454">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="1750" height="280" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1581266792570" />
-    <state width="1750" height="279" key="GridCell.Tab.0.left/0.23.1792.1030@0.23.1792.1030" timestamp="1581289045807" />
-    <state width="1750" height="279" key="GridCell.Tab.0.right" timestamp="1581289045808">
+    <state width="1750" height="279" key="GridCell.Tab.0.left/0.23.1792.1030@0.23.1792.1030" timestamp="1581289354454" />
+    <state width="1750" height="279" key="GridCell.Tab.0.right" timestamp="1581289354455">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="1750" height="280" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1581266792570" />
-    <state width="1750" height="279" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1581289045808" />
+    <state width="1750" height="279" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1581289354455" />
     <state x="496" y="277" key="Rider.ProjectTemplateDialog.Size" timestamp="1581264800831">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>
@@ -273,15 +289,15 @@
     </state>
     <state x="397" y="177" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1581266165905" />
     <state x="397" y="177" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1581262290562" />
-    <state x="746" y="461" key="VCS.ChangelistChooser" timestamp="1581261144012">
+    <state x="746" y="461" key="VCS.ChangelistChooser" timestamp="1581289354403">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
-    <state x="746" y="461" key="VCS.ChangelistChooser/0.23.1792.1030@0.23.1792.1030" timestamp="1581261144012" />
-    <state x="496" y="278" key="Vcs.Push.Dialog.v2" timestamp="1581272507353">
-      <screen x="0" y="23" width="1792" height="1028" />
+    <state x="746" y="461" key="VCS.ChangelistChooser/0.23.1792.1030@0.23.1792.1030" timestamp="1581289354403" />
+    <state x="496" y="278" key="Vcs.Push.Dialog.v2" timestamp="1581289418460">
+      <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1581272507353" />
-    <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1581267687737" />
+    <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1581289418460" />
     <state x="679" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581262084538">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
