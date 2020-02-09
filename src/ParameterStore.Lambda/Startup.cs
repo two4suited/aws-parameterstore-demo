@@ -13,6 +13,7 @@ namespace ParameterStoreDemo.Lambda
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddEnvironmentVariables()
+            .AddSystemsManager("/parameterstoredemo/firstname")
             .Build();
         
         private static IServiceCollection ConfigureServices(IConfigurationRoot root)
