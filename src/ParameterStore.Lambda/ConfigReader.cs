@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Extensions.Options;
 
 namespace ParameterStoreDemo.Lambda
@@ -12,7 +13,18 @@ namespace ParameterStoreDemo.Lambda
         }
         public string Read()
         {
-            return $"{_options.Value.FirstName} {_options.Value.Lastname}";
+            
+            return $"{_options.Value.FirstName} {_options.Value.Lastname} is {CalculateAge(_options.Value.Birthdate)} years old";
+        }
+        
+        private int CalculateAge(DateTime birthDay)
+        {
+            int years = DateTime.Now.Year - birthDay.Year;
+
+            if((birthDay.Month > DateTime.Now.Month) || (birthDay.Month == DateTime.Now.Month && birthDay.Day > DateTime.Now.Day))
+                years--;
+
+            return years;
         }
     }
 }

@@ -26,24 +26,31 @@ namespace ParameterStoreDemo.Infrastructure
            
             var firstName = new StringParameter(this, "FirstNameParameter", new StringParameterProps()
             {
-                ParameterName = "/parameterstoredemo/configuration/firstname",
+                ParameterName = "/parameterstoredemo/firstname",
                 StringValue = "Brian"
             });
             
             var lastName = new StringParameter(this, "LastNameParameter", new StringParameterProps()
             {
-                ParameterName = "/parameterstoredemo/configuration/lastname",
+                ParameterName = "/parameterstoredemo/lastname",
                 StringValue = "Sheridan"
+            });
+            
+            var birthdate = new StringParameter(this, "birthdate", new StringParameterProps()
+            {
+                ParameterName = "/parameterstoredemo/birthdate",
+                StringValue = "10/14/1976"
             });
             
             var configuration = new StringParameter(this, "ConfigurationParameter", new StringParameterProps()
             {
-                ParameterName = "/parameterstoredemo/configuration",
+                ParameterName = "/parameterstoredemo",
                 StringValue = "This is a list of configuration for Parameter Store Demo app"
             });
             
             firstName.GrantRead(role);
             lastName.GrantRead(role);
+            birthdate.GrantRead(role);
             configuration.GrantRead(role);
             
             var statement = new PolicyStatement(new PolicyStatementProps()
