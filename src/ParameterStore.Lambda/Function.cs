@@ -21,13 +21,14 @@ namespace ParameterStoreDemo.Lambda
 
         public Function() 
         {
-            _serviceProvider = Startup.Container.BuildServiceProvider();
+           
 
         }
         
         public string FunctionHandler(string input, ILambdaContext context)
         {
-            var service = _serviceProvider.GetService<IConfigReader>();
+            var serviceProvider = Startup.Container.BuildServiceProvider();
+            var service = serviceProvider.GetService<IConfigReader>();
 
             return service.Read();
         }

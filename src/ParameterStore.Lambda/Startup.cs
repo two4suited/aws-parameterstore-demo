@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,9 +12,9 @@ namespace ParameterStoreDemo.Lambda
                
         private static IConfigurationRoot Configuration => new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
+            .AddSystemsManager("/parameterstoredemo/configuration",optional: true)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddEnvironmentVariables()
-            .AddSystemsManager("/parameterstoredemo/configuration")
             .Build();
         
         private static IServiceCollection ConfigureServices(IConfigurationRoot root)

@@ -1,4 +1,8 @@
+using System.Text.Json;
 using Amazon.CDK;
+using Amazon.CDK.AWS.IAM;
+using Amazon.CDK.AWS.Lambda;
+using Amazon.CDK.AWS.SSM;
 
 namespace ParameterStoreDemo.Infrastructure
 {
@@ -6,7 +10,51 @@ namespace ParameterStoreDemo.Infrastructure
     {
         internal ParameterStoreInfrastructureStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
         {
-            // The code that defines your stack goes here
+            var lambda = new Function(this,"ParameterStoreFunction", new FunctionProps()
+            {
+                Runtime = Runtime.DOTNET_CORE_2_1,
+                Timeout = Duration.Minutes(1),
+                MemorySize = 512,
+                Handler = "ParameterStoreDemo.Lambda::ParameterStoreDemo.Lambda.Function::FunctionHandler",
+                Code = Code.FromAsset("../ParameterStore.Lambda/bin/Debug/netcoreapp2.1/publish"),
+                FunctionName = "ParameterStoreDemo"
+            });
+
+            var role = lambda.Role;
+            
+            
+           
+            var firstName = new StringParameter(this, "FirstNameParameter", new StringParameterProps()
+            {
+                ParameterName = "/parameterstoredemo/configuration/firstname",
+                StringValue = "Brian"
+            });
+            
+            var lastName = new StringParameter(this, "LastNameParameter", new StringParameterProps()
+            {
+                ParameterName = "/parameterstoredemo/configuration/lastname",
+                StringValue = "Sheridan"
+            });
+            
+            var configuration = new StringParameter(this, "ConfigurationParameter", new StringParameterProps()
+            {
+                ParameterName = "/parameterstoredemo/configuration",
+                StringValue = "This is a list of configuration for Parameter Store Demo app"
+            });
+            
+            firstName.GrantRead(role);
+            lastName.GrantRead(role);
+            configuration.GrantRead(role);
+            
+            var statement = new PolicyStatement(new PolicyStatementProps()
+            {
+                Resources = new [] { configuration.ParameterArn},
+                Effect = Effect.ALLOW,
+                Actions = new [] { "ssm:GetParametersByPath" }
+            });
+            
+            role.AddToPolicy(statement);
+
         }
     }
 }
