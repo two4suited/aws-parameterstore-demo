@@ -15,4 +15,6 @@ jobs:
         dotnet-version: 2.1.803
     - name: Build with dotnet
       run: dotnet build src/ParameterStore.Lambda/ParameterStoreDemo.Lambda.csproj --configuration Release
+    - name: Run Unit Tests
+        run: dotnet test tests/ParameterStore.Tests/ParameterStoreDemo.Tests.csproj
 

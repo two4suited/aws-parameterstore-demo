@@ -22,7 +22,7 @@ namespace ParameterStoreDemo.Lambda
 
         public Function() : this(Startup.Build()) { }
 
-        public string FunctionHandler(string input, ILambdaContext context)
+        public string FunctionHandler(ILambdaContext context)
         {
             
             var service = _host.Services.GetService<IConfigReader>();

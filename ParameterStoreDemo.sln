@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterStoreDemo.Infrastr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterStoreDemo.Lambda", "src\ParameterStore.Lambda\ParameterStoreDemo.Lambda.csproj", "{9489D575-BD5D-4662-85EC-2CCFF2686F11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterStoreDemo.Tests", "test\ParameterStoreDemo.Tests\ParameterStoreDemo.Tests.csproj", "{B87D0859-C408-4755-8EF6-132214EB5E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,7 +22,12 @@ Global
 		{9489D575-BD5D-4662-85EC-2CCFF2686F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9489D575-BD5D-4662-85EC-2CCFF2686F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9489D575-BD5D-4662-85EC-2CCFF2686F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87D0859-C408-4755-8EF6-132214EB5E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87D0859-C408-4755-8EF6-132214EB5E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87D0859-C408-4755-8EF6-132214EB5E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87D0859-C408-4755-8EF6-132214EB5E9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{B87D0859-C408-4755-8EF6-132214EB5E9C} = {AFF7FC74-7B54-4A72-AD4D-8073D3BC2A29}
 	EndGlobalSection
 EndGlobal
