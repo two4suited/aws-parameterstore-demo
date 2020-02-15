@@ -22,7 +22,7 @@ namespace ParameterStoreDemo.Lambda
                 
             host.ConfigureServices((c, s) =>
             {
-                s.Configure<CustomConfig>(c.Configuration.GetSection("Secret"));
+                s.Configure<CustomConfig>(c.Configuration);
                 
                 s.AddScoped<IConfigReader,ConfigReader>();
                 s.AddLogging(x =>
