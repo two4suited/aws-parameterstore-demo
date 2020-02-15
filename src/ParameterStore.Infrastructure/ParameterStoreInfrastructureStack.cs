@@ -16,7 +16,7 @@ namespace ParameterStoreDemo.Infrastructure
                 Timeout = Duration.Minutes(1),
                 MemorySize = 128,
                 Handler = "ParameterStoreDemo.Lambda::ParameterStoreDemo.Lambda.Function::FunctionHandler",
-                Code = Code.FromAsset("../ParameterStore.Lambda/bin/Debug/netcoreapp2.1/publish"),
+                Code = Code.FromAsset("../ParameterStore.Lambda/bin/Release/netcoreapp2.1/publish"),
                 FunctionName = "ParameterStoreDemo"
             });
 

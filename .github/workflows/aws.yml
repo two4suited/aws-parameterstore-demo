@@ -17,6 +17,8 @@ jobs:
       run: dotnet build src/ParameterStore.Lambda/ParameterStoreDemo.Lambda.csproj --configuration Release
     - name: Run Unit Tests
       run: dotnet test test/ParameterStoreDemo.Tests/ParameterStoreDemo.Tests.csproj
+    - name: Run Unit Tests
+      run: dotnet build src/ParameterStore.Lambda/ParameterStoreDemo.Lambda.csproj --configuration Release
     - name: cdk deploy
       uses: two4suited/aws-cdk-dotnet-github-action@master
       with:
