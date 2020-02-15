@@ -2,37 +2,41 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace ParameterStoreDemo.Lambda
 {
     public static class Startup
     {
-        public static IServiceCollection Container => ConfigureServices(Configuration); 
-               
-        private static IConfigurationRoot Configuration => new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddSystemsManager("/parameterstoredemo",optional: true)
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .AddEnvironmentVariables()
-            .Build();
-        
-        private static IServiceCollection ConfigureServices(IConfigurationRoot root)
+        public static IHost Build()
         {
-            var services = new ServiceCollection();
-            services.Configure<CustomConfig>(root.Bind);
-                    
-            services.AddScoped<IConfigReader,ConfigReader>();
-
-            services.AddLogging(x =>
+            var host = new HostBuilder();
+                
+            host.ConfigureAppConfiguration(c =>
+                c.AddSystemsManager(configureSource =>
+                {
+                    configureSource.Path = "/parameterstoredemo";
+                    configureSource.Optional = false;
+                }));
+                
+            host.ConfigureServices((c, s) =>
             {
-                x.AddConsole();
-                x.AddAWSProvider();
-                x.SetMinimumLevel(LogLevel.Information);
+                s.Configure<CustomConfig>(c.Configuration.GetSection("Secret"));
+                
+                s.AddScoped<IConfigReader,ConfigReader>();
+                s.AddLogging(x =>
+                {
+                    x.AddConsole();
+                    x.AddAWSProvider();
+                    x.SetMinimumLevel(LogLevel.Information);
+                });
             });
-           
-            return services;
-        
+
+            return host.Build();
+
         }
+    
+        
     }
 }
