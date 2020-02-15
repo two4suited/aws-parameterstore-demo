@@ -17,4 +17,15 @@ jobs:
       run: dotnet build src/ParameterStore.Lambda/ParameterStoreDemo.Lambda.csproj --configuration Release
     - name: Run Unit Tests
       run: dotnet test test/ParameterStoreDemo.Tests/ParameterStoreDemo.Tests.csproj
+    - name: cdk deploy
+      uses: two4suited/aws-cdk-dotnet-github-action@master
+      with:
+        cdk_subcommand: 'deploy'
+        actions_comment: false
+        args: '--require-approval never'
+        working_dir: 'src/ParameterStore.Infrastructure'
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: 'us-west-2'
 
