@@ -356,4 +356,4 @@ src/.DS_Store
 src/ParameterStore.Infrastructure/.DS_Store
 src/ParameterStore.Lambda/.DS_Store
 test/.DS_Store
-/.idea/
+.idea/
