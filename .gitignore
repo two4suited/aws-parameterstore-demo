@@ -350,6 +350,7 @@ MigrationBackup/
 .ionide/
 /.aws-sam/
 /cdk.out/
+/.idea/
 /src/ParameterStore.Infrastructure/cdk.out/
 .DS_Store
 src/.DS_Store
